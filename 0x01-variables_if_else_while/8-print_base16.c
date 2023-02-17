@@ -15,6 +15,7 @@ int main(void)
 	while (i < 16)
 	{
 		char hex;
+
 		if (i < 10)
 		{
 			hex = '0' + i;
