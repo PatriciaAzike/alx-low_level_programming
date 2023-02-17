@@ -10,9 +10,10 @@
  */
 int main(void)
 {
-        int i = 0;
-        while (i < 16)
-        {
+	int i = 0;
+
+	while (i < 16)
+	{
 		char hex;
 		if (i < 10)
 		{
@@ -22,9 +23,9 @@ int main(void)
 		{
 			hex = 'a' + (i - 10);
 		}
-                putchar(hex);
+		putchar(hex);
 		i++;
-        }
-        putchar('\n');
-        return (0);
+	}
+	putchar('\n');
+	return (0);
 }
