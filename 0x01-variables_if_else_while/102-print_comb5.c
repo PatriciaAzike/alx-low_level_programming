@@ -12,17 +12,17 @@ int main(void)
 {
 	int i = 0, j = 0;
 
-	while(i < 100)
+	while (i < 100)
 	{
 		j = i;
 
-		while(j < 100)
+		while (j < 100)
 		{
-			putchar('0' + (i/10));
-			putchar('0' + (i%10));
+			putchar('0' + (i / 10));
+			putchar('0' + (i % 10));
 			putchar(' ');
-			putchar('0' + (j/10));
-			putchar('0' + (j%10));
+			putchar('0' + (j / 10));
+			putchar('0' + (j % 10));
 			if (i != 99 || j != 99)
 			{
 				putchar(',');
