@@ -11,7 +11,7 @@ int main(void)
 	int i = 0;
 
 	printf("%d, %d", x1, x2);
-	while(i < 96)
+	while (i < 96)
 	{
 		x3 = x1 + x2;
 		i++;
