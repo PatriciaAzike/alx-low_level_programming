@@ -7,15 +7,15 @@
  */
 int main(void)
 {
-	int x1 = 1, x2 = 2, x3;
+	double x1 = 1, x2 = 2, x3;
 	int i = 0;
 
-	printf("%d, %d", x1, x2);
+	printf("%.0f, %.0f", x1, x2);
 	while (i < 96)
 	{
 		x3 = x1 + x2;
 		i++;
-		printf(", %d", x3);
+		printf(", %.0f", x3);
 		x1 = x2;
 		x2 = x3;
 	}
