@@ -1,7 +1,7 @@
 #include "main.h"
 /* betty style doc for function main goes there */
 /**
- * main - Entry point
+ * print - prints alphabets
  *
  * Return: Always 0 (Success)
  */
