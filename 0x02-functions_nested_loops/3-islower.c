@@ -1,7 +1,7 @@
 #include "main.h"
 /* betty style doc for function main goes there */
 /**
- * lowercase: checks for lowercase character
+ * _islower - checks for lowercase character
  * @c: integer
  *
  * Return: Always 0 (Success)
