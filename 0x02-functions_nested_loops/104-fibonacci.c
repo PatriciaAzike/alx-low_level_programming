@@ -7,11 +7,11 @@
  */
 int main(void)
 {
-	unsigned long x1 = 1, x2 = 2, x3;
+	unsigned long x1 = 1, x2 = 1, x3;
 	int i = 2;
 
-	printf("%lu, %lu", x1, x2);
-	while (i < 98)
+	printf("1");
+	while (i < 99)
 	{
 		x3 = x1 + x2;
 		i++;
