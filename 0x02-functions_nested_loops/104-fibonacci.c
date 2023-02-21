@@ -1,49 +1,35 @@
 #include <stdio.h>
-
+/* betty style doc for function main goes there */
 /**
- * main - print first 98 Fibonacci numbers 
- * Return: 0
+ * main - print the first 98 Fibonacci numbers
+ *
+ * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	int counter, overflow;
-	unsigned long a = 1;
-	unsigned long b = 1;
-	unsigned long sum = 0;
-	long a_head, a_tail, b_head, b_tail, sum_head, sum_tail;
+	unsigned long x1 = 1, x2 = 1, x3;
+	int i = 2;
 
-	printf("1");
-
-	for (counter = 2; counter < 93; counter++) /* will still print */
+	printf("%lu, %lu", x1, x2);
+	while (i < 98)
 	{
-		sum = a + b;
-		a = b;
-		b = sum;
-		printf(", %lu", sum);
+		x3 = x1 + x2;
+		i++;
+		if (x3 > 999999999)
+		{
+			unsigned long top = x3 / 1000000000;
+			unsigned long bot = x3 % 1000000000;
+
+			printf(", %lu%09lu", top, bot);
+		}
+		else
+		{
+			printf(", %lu", x3);
+		}
+		x1 = x2;
+		x2 = x3;
 	}
-
-	a_head = a / 1000000000; /* break larger num into 2 parts */
-	a_tail = a % 1000000000;
-	b_head = b / 1000000000;
-	b_tail = b % 1000000000;
-
-	for (; counter < 99; counter++)
-	{
-		overflow = (a_tail + b_tail) / 1000000000;
-		sum_tail = (a_tail + b_tail) - (1000000000 * overflow);
-		sum_head = (a_head + b_head) + overflow;
-
-		printf(", %lu%lu", sum_head, sum_tail);
-
-		a_head = b_head;
-		a_tail = b_tail;
-		b_head = sum_head;
-		b_tail = sum_tail;
-	}
-
-
 	printf("\n");
-
 	return (0);
+
 }
