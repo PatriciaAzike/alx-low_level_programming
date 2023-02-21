@@ -12,9 +12,9 @@ int main(void)
 	while (x3 <= 4000000)
 	{
 		x3 = x1 + x2;
-		if (x1 % 2 == 0)
+		if (x3 % 2 == 0)
 		{
-			ev_fib += x1;
+			ev_fib += x3;
 		}
 		x1 = x2;
 		x2 = x3;
