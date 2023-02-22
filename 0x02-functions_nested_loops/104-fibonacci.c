@@ -29,7 +29,6 @@ int main(void)
 		x1 = x2;
 		x2 = x3;
 	}
-	x;
 	printf("\n");
 	return (0);
 }
