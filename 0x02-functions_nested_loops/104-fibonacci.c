@@ -8,9 +8,9 @@ int main(void)
 {
 	unsigned long x1 = 1, x2 = 1, x3;
 	unsigned long h1, t1, h2, t2, bust;
-	
+	int i;
 	printf("1");
-	for (int i = 2; i < 98; i++)
+	for (i = 2; i < 98; i++)
 	{
 		x3 = x1 + x2;
 		if (x3 > 999999999)
