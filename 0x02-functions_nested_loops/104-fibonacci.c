@@ -1,26 +1,26 @@
 #include <stdio.h>
-/* betty style doc for function main goes there */
 /**
- * main - print the first 98 Fibonacci numbers
- *
- * Return: Always 0 (Success)
+ * main - print first 98 Fibonacci numbers 
+ * Return: 0
  */
+
 int main(void)
 {
 	unsigned long x1 = 1, x2 = 1, x3;
-	int i = 2;
-
+	unsigned long h1, t1, h2, t2, bust;
+	
 	printf("1");
-	while (i < 98)
+	for (int i = 2; i < 98; i++)
 	{
 		x3 = x1 + x2;
-		i++;
 		if (x3 > 999999999)
 		{
-			unsigned long top = x3 / 1000000000;
-			unsigned long bot = x3 % 1000000000;
-
-			printf(", %lu%09lu", top, bot);
+			h1 = x2 / 1000000000;
+			t1 = x2 % 1000000000;
+			h2 = x3 / 1000000000;
+			t2 = x3 % 1000000000;
+			bust = (t1 + t2) / 1000000000;
+			printf(", %lu%09lu", h1 + h2 + bust, (t1 + t2) % 1000000000);
 		}
 		else
 		{
@@ -31,5 +31,5 @@ int main(void)
 	}
 	printf("\n");
 	return (0);
-
 }
+
