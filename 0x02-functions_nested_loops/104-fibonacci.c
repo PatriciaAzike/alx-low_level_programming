@@ -1,10 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - print first 98 Fibonacci numbers 
+ * main - print first 98 Fibonacci numbers
  * Return: 0
  */
-
 int main(void)
 {
 	unsigned long x1 = 1;
