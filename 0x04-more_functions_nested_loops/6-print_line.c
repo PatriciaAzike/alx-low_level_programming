@@ -2,6 +2,7 @@
 
 /**
  * print_line - prints a straight line n times
+ * @n: integer
  *
  * Return: Always 0 (Success)
  */
