@@ -1,7 +1,7 @@
 #include "main.h"
 /* betty style doc for function main goes there */
 /**
- * add - add two integers
+ * mul - multiply two integers
  * @a: first integer
  * @b: second integer
  *
