@@ -1,5 +1,5 @@
 #include "main.h"
-/* betty style doc for function main goes there */
+
 /**
  * print_line - prints a straight line n times
  *
@@ -17,7 +17,7 @@ void print_line(int n)
 	{
 		while (i < n)
 		{
-			_putchar('_');
+			_putchar(95);
 			i++;
 		}
 		_putchar('\n');
