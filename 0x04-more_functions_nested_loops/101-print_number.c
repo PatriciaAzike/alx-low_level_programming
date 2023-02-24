@@ -1,14 +1,13 @@
 #include "main.h"
-/* betty style doc for function main goes there */
+
 /**
- * print_number - print any number
- * @n: integer
- *
- * Return: Always 0 (Success)
+ * print_number - print any integer.
+ * @n: integer.
+ * Return: None here
  */
 void print_number(int n)
 {
-	int i = 1, m;
+	int m, i = 1, x;
 
 	if (n < 0)
 	{
@@ -20,12 +19,15 @@ void print_number(int n)
 		m = n;
 	}
 
-	while (m / i >= 10)
+	x = m;
+
+	while (x /i >= 10)
 	{
+		/*x /= 10;*/
 		i *= 10;
 	}
 
-	while (i > 0)
+	while (i >= 1)
 	{
 		_putchar(48 + (m / i));
 		m %= i;
