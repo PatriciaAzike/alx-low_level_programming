@@ -1,17 +1,18 @@
 #include "main.h"
-
+/* betty style doc for function main goes there */
 /**
- * print_number - prints an integer.
- * @n: input integer.
- * Return: no return.
+ * print_number - print any number
+ * @n: integer
+ *
+ * Return: Always 0 (Success)
  */
 void print_number(int n)
 {
-	int m, i, x;
+	int i = 1, m;
 
 	if (n < 0)
 	{
-		_putchar(45);
+		_putchar('-');
 		m = n * -1;
 	}
 	else
@@ -19,17 +20,15 @@ void print_number(int n)
 		m = n;
 	}
 
-	x = m;
-	i = 1;
-
-	while (x > 9)
+	while (m / i >= 10)
 	{
-		x /= 10;
 		i *= 10;
 	}
 
-	for (; i >= 1; i /= 10)
+	while (i > 0)
 	{
-		_putchar(48 + ((m / i) % 10));
+		_putchar('0' + (m / i));
+		m %= i;
+		i /= 10;
 	}
 }
