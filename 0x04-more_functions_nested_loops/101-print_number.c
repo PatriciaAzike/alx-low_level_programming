@@ -21,16 +21,15 @@ void print_number(int n)
 
 	x = m;
 
-	while (x /i >= 10)
+	while (x >= 10)
 	{
-		/*x /= 10;*/
+		x /= 10;
 		i *= 10;
 	}
 
 	while (i >= 1)
 	{
-		_putchar(48 + (m / i));
-		m %= i;
+		_putchar(48 + ((m / i) % 10));
 		i /= 10;
 	}
 }
