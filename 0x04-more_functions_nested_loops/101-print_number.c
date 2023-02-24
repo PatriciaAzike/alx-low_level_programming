@@ -8,7 +8,7 @@
  */
 void print_number(int n)
 {
-	int i = 1, m;
+	unsigned int i = 1, m;
 
 	if (n < 0)
 	{
@@ -19,12 +19,10 @@ void print_number(int n)
 	{
 		m = n;
 	}
-
 	while (m / i >= 10)
 	{
 		i *= 10;
 	}
-
 	while (i > 0)
 	{
 		_putchar(48 + (m / i));
