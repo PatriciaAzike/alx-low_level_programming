@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * print_number - print any integer.
- * @n: integer.
- * Return: None here
+ * print_number - prints an integer.
+ * @n: input integer.
+ * Return: no return.
  */
 void print_number(int n)
 {
-	int m, i = 1, x;
+	int m, i, x;
 
 	if (n < 0)
 	{
@@ -20,16 +20,16 @@ void print_number(int n)
 	}
 
 	x = m;
+	i = 1;
 
-	while (x >= 10)
+	while (x > 9)
 	{
 		x /= 10;
 		i *= 10;
 	}
 
-	while (i >= 1)
+	for (; i >= 1; i /= 10)
 	{
 		_putchar(48 + ((m / i) % 10));
-		i /= 10;
 	}
 }
