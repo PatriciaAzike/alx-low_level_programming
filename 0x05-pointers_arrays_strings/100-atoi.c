@@ -18,7 +18,6 @@ int _atoi(char *s)
 	{
 		if (*s == '+')
 		{
-			sign *= 1;
 		}
 		else if (*s == '-')
 		{
@@ -27,7 +26,21 @@ int _atoi(char *s)
 		else if (*s >= '0' && *s <= '9')
 		{
 			digit = *s - '0';
-			integer = integer * 10 + digit;
+			if (integer < -214748364 || (integer == -214748364 && digit == 8))
+			{
+				/* Integer underflow has occurred */
+				integer = -2147483648;
+				break;
+			}
+			else if (integer > 214748364 || (integer == 214748364 && digit > 7))
+			{
+				integer = 2147483647;
+				break;
+			}
+			else
+			{
+				integer = integer * 10 + sign * digit;
+			}
 		}
 		else if (integer != 0)
 		{
@@ -35,5 +48,5 @@ int _atoi(char *s)
 		}
 		s++;
 	}
-	return (integer * sign);
+	return (integer);
 }
