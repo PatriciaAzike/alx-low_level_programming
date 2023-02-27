@@ -12,9 +12,10 @@
 int main(void)
 {
 	int i = 0;
+	time_t t;
 	char passwd[len_of_passwd + 1];
 
-	srand(time(NULL));
+	srand((unsigned int) time(&t));
 	
 	while (i < len_of_passwd)
 	{
