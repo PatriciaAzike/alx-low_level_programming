@@ -18,7 +18,7 @@ int main(void)
 
 	while (i < len_of_passwd)
 	{
-		passwd[i] = rand() % 32 + 'a';
+		passwd[i] = rand() % 128 + 'a';
 		i++;
 	}
 	passwd[len_of_passwd] = '\0';
