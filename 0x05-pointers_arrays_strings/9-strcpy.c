@@ -4,14 +4,15 @@
 
 /**
  * _strcpy - copies a string
- * @dest: first character
- * @src: character pointer
+ * @dest: character
+ * @src: character
  *
  * Return: Always 0.
  */
 char *_strcpy(char *dest, char *src)
 {
 	char *buffer = dest;
+
 	while (*src != '\0')
 	{
 		*dest = *src;
@@ -19,5 +20,5 @@ char *_strcpy(char *dest, char *src)
 		src++;
 	}
 	*dest = '\0';
-	return buffer;
+	return (buffer);
 }
