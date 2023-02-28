@@ -1,32 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
-#define PASSWD_LEN 2772
-
 /**
- * main - generates random valid passwords
- *
+ * main - generates keygen.
  * Return: 0 Always.
  */
-int main(void) {
-    char buffer[1024];
-    int sum = 0, remaining = PASSWD_LEN;
+int main(void)
+{
+	int r = 0, i = 0;
+	int passwd_len = 2772;
+	time_t t;
 
-    srand((unsigned int) time(NULL));
-
-    while (remaining < PASSWD_LEN) {
-        int r = rand() % 128;
-        if (sum + r > PASSWD_LEN) {
-            continue;
-        }
-        buffer[sizeof(buffer) - remaining] = (char) r;
-        remaining -= r;
-        sum += r;
-    }
-
-    printf("%s\n", buffer);
-
-    return 0;
+	srand((unsigned int) time(&t));
+	while (i < passwd_len)
+	{
+		r = rand() % 128;
+		if ((i + r) > passwd_len)
+			break;
+		i += r;
+		printf("%c", r);
+	}
+	printf("%c\n", (passwd_len - i));
+	return (0);
 }
 
