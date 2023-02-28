@@ -1,28 +1,32 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
-#define len_of_passwd 20
-/**
- * main - generate passwords 
- *
- * Return: Always 0.
- */
-int main(void)
-{
-	int i = 0;
-	time_t t;
-	char passwd[len_of_passwd + 1];
+#define PASSWD_LEN 2772
 
-	srand((unsigned int) time(&t));
-	
-	while (i < len_of_passwd)
-	{
-		passwd[i] = rand() % 128;
-		i++;
-	}
-	passwd[len_of_passwd] = '\0';
-	printf("%s\n", passwd);
-	return (0);
+/**
+ * main - generates random valid passwords
+ *
+ * Return: 0 Always.
+ */
+int main(void) {
+    char buffer[1024];
+    int sum = 0, remaining = PASSWD_LEN;
+
+    srand((unsigned int) time(NULL));
+
+    while (remaining < PASSWD_LEN) {
+        int r = rand() % 128;
+        if (sum + r > PASSWD_LEN) {
+            continue;
+        }
+        buffer[sizeof(buffer) - remaining] = (char) r;
+        remaining -= r;
+        sum += r;
+    }
+
+    printf("%s\n", buffer);
+
+    return 0;
 }
+
