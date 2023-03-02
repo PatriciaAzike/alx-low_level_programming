@@ -7,24 +7,25 @@
  */
 char *rot13(char *s)
 {
-       	char *str = s;
- 	char c;
+	int i = 0, j;
+	char *leet_str = s;
+	char a[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char b[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
- 	while (*s)
-  	{
-		if ((*s >= 'a' && *s <= 'm') || (*s >= 'A' && *s <= 'M'))
+	while (s[i] != '\0')
+	{
+		j = 0;
+
+		while (a[j] != '\0' && s[i] != a[j])
 		{
-			c = *s + 13;
+			j++;
 		}
-		else if ((*s >= 'n' && *s <= 'z') || (*s >= 'N' && *s <= 'Z'))
+		if (s[i] == a[j])
 		{
-			c = *s - 13;
+			leet_str[i] = b[j];
 		}
-		else
-		{
-			c = *s;
-		}
-		*s++ = c;
+		i++;
 	}
-	return (str);
+
+	return (leet_str);
 }
