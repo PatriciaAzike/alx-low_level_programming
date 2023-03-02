@@ -25,12 +25,12 @@ char *leet(char *str)
 	{
 		char c = str[i];
 		char leet_c = leet_map[(int)c];
+		
 		if (leet_c != 0)
 		{
 			leet_str[i] = leet_c;
 		}
 		i++;
 	}
-
-    return leet_str;
+    return (leet_str);
 }
