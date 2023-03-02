@@ -8,24 +8,22 @@
 
 char *leet(char *s)
 {
-	int i = 0;
-	int x[11] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
-	int y[11] = {'4','4', '3', '3', '0', '0', '7', '7', '1', '1'};
+	int i, j;
+	char *leet_str = s;
+	char a[] = "aAeEoOtTlL";
+	char b[] = "4433007711";
 
-	while (s[i] != '\0')
+	for (j = 0; s[j] != '\0'; j++)
 	{
-		int j = 0;
-
-		while (j < 11)
+		for (i = 0; a[i] != '\0'; i++)
 		{
-			if (s[i] == x[j])
+			if (s[j] == a[i])
 			{
-				s[i] = y[j];
+				leet_str[j] = b[i];
 				break;
 			}
-			j++;
 		}
-		i++;
 	}
-	return (s);
+
+	return (leet_str);
 }
