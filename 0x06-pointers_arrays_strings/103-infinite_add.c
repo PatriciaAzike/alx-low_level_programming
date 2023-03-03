@@ -44,9 +44,9 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		else
 			carry = 0;
 		if (res > 0)
-			r[res_index] = (res % 10) + 48;
+			*(r + res_index) = (res % 10) + 48;
 		else
-			r[res_index] = '0';
+			*(r + res_index) = '0';
 		if (len1 > 0)
 			len1--, curr1 = *(n1 + len1) - 48;
 		else
