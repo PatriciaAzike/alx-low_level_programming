@@ -7,11 +7,10 @@
  */
  char *_strpbrk(char *s, char *accept)
 {
-	char *st;
+	char *st = accept;
 
 	while (*s != '\0')
 	{
-		st = accept;
 		while (*st != '\0')
 		{
 			if (*s == *st)
@@ -21,6 +20,7 @@
 			st++;
 		}
 		s++;
+		st = accept;
 	}
 	return ('\0');
 }
