@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 /**
  * @_strstr - locates a substring.
  * @haystack: first character
@@ -7,23 +8,16 @@
  */
  char *_strstr(char *haystack, char *needle)
 {
-	char *hay;
-	char *need;
+	int i, j;
 
-	while (*haystack != '\0')
+	for (i = 0; haystack[i] != '\0'; i++)
 	{
-		hay = haystack;
-		need = needle;
-		while (*haystack != '\0' && *need != '\0' && *haystack == *need)
-		{
-			haystack++;
-			need++;
-		}
-		if (!*need)
+		for (j = 0; needle[j] != '\0' && haystack[i+j] == needle[j]; j++)
+			;
+		if (needle[j] == '\0')
 			{
-				return (hay);
+				return (haystack + i);
 			}
-		haystack = hay + 1;
 	}
-	return (0);
+	return (NULL);
 }
