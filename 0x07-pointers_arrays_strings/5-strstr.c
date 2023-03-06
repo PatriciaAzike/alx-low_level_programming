@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stddef.h>
 /**
- * @_strstr - locates a substring.
+ * _strstr - locates a substring.
  * @haystack: first character
  * @needle: second character
  * Return: pointer to the beginning of the located substring
