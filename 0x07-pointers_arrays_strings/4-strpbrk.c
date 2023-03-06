@@ -7,7 +7,7 @@
  */
  char *_strpbrk(char *s, char *accept)
 {
-	unsigned int i = 0, j;
+	int i = 0, j;
 
 	while (*(s + i) != '\0')
 	{
