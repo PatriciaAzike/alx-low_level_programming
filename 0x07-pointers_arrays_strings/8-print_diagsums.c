@@ -11,16 +11,10 @@ void print_diagsums(int *a, int size)
 {
 	int dsum1 = 0, dsum2 = 0, i = 0;
 
-	while (i < (size * size))
+	while (i < size)
 	{
-		if (i % (size + 1) == 0)
-		{
-			dsum1 += a[i];
-		}
-		if (i % (size - 1) == 0 && i != 0 && i < size * size - 1)
-		{
-			dsum2 += a[i];
-		}
+		dsum1 += a[(size + 1) * i];
+		dsum2 += a[(size - 1) * (i + 1)];
 		i++;
 	}
 	printf("%d, %d\n", dsum1, dsum2);
