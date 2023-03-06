@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stdio.h>
 #include <string.h>
-
 /**
  * @_strstr - locates a substring.
  * @haystack: first character
@@ -18,10 +17,8 @@
 	{
 		hay = haystack;
 		need = needle;
-
 		while (*haystack != '\0' && *need != '\0' && *haystack == *need)
 		{
-			
 			haystack++;
 			need++;
 		}
@@ -31,5 +28,5 @@
 			}
 		haystack = hay + 1;
 	}
-	return NULL;
+	return (NULL);
 }
