@@ -2,21 +2,21 @@
 #define NULL 0
 /**
  * _strstr - locates a substring
- * @haystack: first character
- * @needle: second character
+ * @haystk: first character
+ * @nedl: second character
  * Return: pointer to the beginning of the located substring
  */
- char *_strstr(char *haystack, char *needle)
+ char *_strstr(char *haystk, char *nedl)
 {
 	int i, j;
 
-	for (i = 0; haystack[i] != '\0'; i++)
+	for (i = 0; haystk[i] != '\0'; i++)
 	{
-		for (j = 0; needle[j] != '\0' && haystack[i+j] == needle[j]; j++)
+		for (j = 0; nedl[j] != '\0' && haystk[i+j] == nedl[j]; j++)
 			;
-		if (needle[j] == '\0')
+		if (nedl[j] == '\0')
 			{
-				return (haystack + i);
+				return (haystk + i);
 			}
 	}
 	return (NULL);
