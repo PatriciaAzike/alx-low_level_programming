@@ -1,4 +1,10 @@
 #include "main.h"
+/**
+ * helper - helper function
+ * @n: integer
+ * @i: divisor
+ * Return: square of a number if the natural log exists
+ */
 int helper(int n, int i)
 {
 	if (i * i == n)
@@ -14,7 +20,7 @@ int helper(int n, int i)
 /**
  * _sqrt_recursion- gives the sqrt of a number
  * @n: integer
- * Return: factorial
+ * Return: -1 if the natural log does not exist
  */
 int _sqrt_recursion(int n)
 {
