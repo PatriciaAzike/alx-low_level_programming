@@ -13,12 +13,13 @@ int is_prime_number(int n)
 	}
 	return (helper(n, 2));
 }
+
 /**
  * helper - helper function
  * @x: integer
  * @i: divisor
  * Return: 1 if prime, 0 otherwise
- */i
+ */
 int helper(int x, int i)
 
 {
