@@ -4,7 +4,7 @@
  * @n: integer
  * Return: 1 if prime, 0 otherwise
  */
-int helper(int , int);
+int helper(int, int);
 int is_prime_number(int n)
 {
 	if (n <= 1)
@@ -27,7 +27,7 @@ int helper(int x, int i)
 	{
 		return (1);
 	}
-	else 
+	else
 	{
 		if (x % i == 0)
 		{
@@ -38,5 +38,5 @@ int helper(int x, int i)
 			return (1);
 		}
 	}
-	return helper(x, i + 1);
+	return (helper(x, i + 1));
 }
