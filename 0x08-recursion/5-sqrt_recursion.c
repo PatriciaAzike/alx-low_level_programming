@@ -1,4 +1,16 @@
 #include "main.h"
+int helper(int n, int i)
+{
+	if (i * i == n)
+	{
+		return (i);
+	}
+	else if (i * i > n)
+	{
+		return (-1);
+	}
+	return (helper(n, i + 1));
+}
 /**
  * _sqrt_recursion- gives the sqrt of a number
  * @n: integer
@@ -14,17 +26,5 @@ int _sqrt_recursion(int n)
 	{
 		return (n);
 	}
-	else
-	{
-		int i;
-
-		for (i = 1; i * i <= n; i++)
-		{
-			if (i * i == n)
-			{
-				return (i);
-			}
-		}
-		return (-1);
-	}
+	return (helper(n, 1));
 }
