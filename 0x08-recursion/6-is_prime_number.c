@@ -1,20 +1,5 @@
 #include "main.h"
 /**
- * is_prime_number - checks if a number is prime
- * @n: integer
- * Return: 1 if prime, 0 otherwise
- */
-int helper(int, int);
-int is_prime_number(int n)
-{
-	if (n <= 1)
-	{
-		return (0);
-	}
-	return (helper(n, 2));
-}
-
-/**
  * helper - helper function
  * @x: integer
  * @i: divisor
@@ -40,3 +25,17 @@ int helper(int x, int i)
 	}
 	return (helper(x, i + 1));
 }
+/**
+ * is_prime_number - checks if a number is prime
+ * @n: integer
+ * Return: 1 if prime, 0 otherwise
+ */
+int is_prime_number(int n)
+{
+	if (n <= 1)
+	{
+		return (0);
+	}
+	return (helper(n, 2));
+}
+
