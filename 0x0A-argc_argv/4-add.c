@@ -2,40 +2,30 @@
 #include <stdlib.h>
 #include <ctype.h>
 /**
- * main - adds numbers
- * @argc: number of arguments
- * @argv: character that holds the name
- * Return: return 0 or 1
+ *main - adds positive numbers.
+ *@argc: argument count
+ *@argv: array that contains the command line arguments.
+*Return: 0 
 */
+
 int main(int argc, char *argv[])
 {
 	int i = 1, j = 0, sum = 0;
 
-	if (argc == 1)
+	while ( i < argc)
 	{
-		printf("0\n");
-	}
-	else
-	{
-		while (i < argc)
+		while (argv[i][j] != '\0')
 		{
 			if (!isdigit(argv[i][j]))
 			{
 				printf("Error\n");
 				return (1);
 			}
-			if (!argv[i][j+1])
-			{
-				sum += atoi(argv[i]);
-				i++;
-				j = 0;
-			}
-			else
-			{
-				j++;
-			}
+			j++;
 		}
-		printf("%d\n", sum);
+		sum += atoi(argv[i]);
+		i++;
 	}
+	printf("%d\n", sum);
 	return (0);
 }
