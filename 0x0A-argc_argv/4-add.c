@@ -2,12 +2,11 @@
 #include <stdlib.h>
 #include <ctype.h>
 /**
- *main - adds positive numbers.
+ *main - adds positive numbers
  *@argc: argument count
  *@argv: array that contains the command line arguments.
-*Return: 0 
+*Return: 0
 */
-
 int main(int argc, char *argv[])
 {
 	int i = 1, j, sum = 0;
