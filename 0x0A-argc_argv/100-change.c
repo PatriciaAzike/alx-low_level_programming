@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - computes number of coins to make change
+ * main - computes number of coins to give change
  * @argc: argument count
  * @argv: array of arguments
  * Return: 0
