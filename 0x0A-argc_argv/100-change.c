@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main- computes number of coins to make change
+ * main - computes number of coins to make change
  * @argc: argument count
  * @argv: array of arguments
  * Return: 0
@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
 {
 	int cents, change = 0;
 
-	if (argc != 2)
+	if (argc == 1 || argc > 2)
 	{
 		printf("Error\n");
 		return (1);
