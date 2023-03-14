@@ -3,6 +3,7 @@
 #include <string.h>
 /**
  * argstostr - function that concatenates the arguments of the program
+ * @ac: argument count
  * @av: variable of type char
  * Return: pointer to new string or null if it fails
  */
@@ -18,8 +19,7 @@ char *argstostr(int ac, char **av)
 	{
 		return (NULL);
 	}
-	
-	while ( i < ac)
+	while (i < ac)
 	{
 		tot_len += strlen(av[i]) + 1;
 		i++;
