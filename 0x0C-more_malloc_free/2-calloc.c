@@ -1,11 +1,10 @@
 #include "main.h"
 #include <stdlib.h>
-
 /**
- * alloc_grid - function that allocates memory for an array, using malloc
+ * _calloc - function that allocates memory for an array, using malloc
  * @nmemb: number of array elements
  * @size: size of array elements in bytes
- * Return: return pointer to array, or NULL 
+ * Return: return pointer to array, or NULL
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
