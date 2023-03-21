@@ -1,6 +1,6 @@
 #include "dog.h"
 #include <stdlib.h>
-
+#include <string.h>
 /**
  * new_dog - creates a new dog.
  * @name: dog's name
@@ -10,7 +10,7 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	int i, new_name, new_owner;
+	int i, len_name, len_owner;
 	dog_t *new_dog;
 
 	new_dog = malloc(sizeof(*new_dog));
@@ -19,20 +19,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(new_dog);
 		return (NULL);
 	}
-	new_name = 0;
-	while (name[new_name])
-	{
-		;
-		new_name++;
-	}
-	new_owner = 0;
-	while (owner[new_owner])
-	{
-		;
-		new_owner++;
-        }
-	new_dog->name = malloc(new_name + 1);
-	new_dog->owner = malloc(new_owner + 1);
+	len_name = strlen(name);
+	len_owner = strlen(owner);
+	new_dog->name = malloc(len_name + 1);
+	new_dog->owner = malloc(len_owner + 1);
 	if ((new_dog->name == NULL) || (new_dog->owner == NULL))
 	{
 		free(new_dog->owner);
@@ -41,7 +31,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	i = 0;
-	while (i < new_name)
+	while (i < len_name)
 	{
 		new_dog->name[i] = name[i];
 		i++;
@@ -49,7 +39,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	new_dog->name[i] = '\0';
 	new_dog->age = age;
 	i = 0;
-	while (i < new_owner)
+	while (i < len_owner)
 	{
 		new_dog->owner[i] = owner[i];
 		i++;
