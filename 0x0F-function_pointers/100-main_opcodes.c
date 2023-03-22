@@ -26,7 +26,7 @@ int main(int argc, char **argv)
 	 opcodes = (char *) main;
 	 for (i = 0; i < bytes; i++)
 	 {
-		 printf("%.2hhx ", *(opcodes + i));
+		 printf("%02x ", *(opcodes + i) & 0xFF);
 		 if (i < bytes - 1)
 			 printf(" ");
 	 }
