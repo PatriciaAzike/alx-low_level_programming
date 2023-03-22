@@ -9,7 +9,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int (*operator)(int, int);
+	int (*op_)(int, int);
 	int num1, num2;
 
 	if (argc != 4)
@@ -17,11 +17,11 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	operator = get_op_func(argv[2]);
+	op_ = get_op_func(argv[2]);
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
 
-	if (operator == NULL)
+	if (op_ == NULL)
 	{
 		printf("Error\n");
 		exit(99);
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 
-	printf("%d\n", operator(num1, num2));
+	printf("%d\n", op_(num1, num2));
 
 	return (0);
 }
