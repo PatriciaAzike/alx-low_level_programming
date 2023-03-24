@@ -2,7 +2,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 /**
- * print_all-  prints anything.
+ * print_all -  prints anything.
  * @format: format of operation
  * Return: Returns nothing
  */
@@ -23,7 +23,8 @@ void print_all(const char * const format, ...)
 			{
 				printf(", ");
 				break;
-			} j++;
+			}
+			j++;
 		}
 		switch (format[i])
 		{
@@ -49,7 +50,8 @@ void print_all(const char * const format, ...)
 			}
 			printf("%s", s);
 			break;
-		} i++;
+		}
+		i++;
 	}
 	printf("\n");
 	va_end(arg_list);
