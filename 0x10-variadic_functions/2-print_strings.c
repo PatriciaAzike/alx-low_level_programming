@@ -10,17 +10,18 @@
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i = 0;
+	char *s;
 	va_list arg_list;
 
 	va_start(arg_list, n);
 	while (i < n)
 	{
-		char *s = va_arg(arg_list, char *);
-		if (s != NULL)
+		s = va_arg(arg_list, char *);
+		if (s)
 		{
 			printf("%s", s);
 		}
-		else
+		if (s == NULL)
 		{
 			printf("nil");
 		}
