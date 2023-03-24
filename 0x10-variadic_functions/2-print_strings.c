@@ -9,11 +9,12 @@
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-	unsigned int i = 0;
+	unsigned int i;
 	char *s;
 	va_list arg_list;
 
 	va_start(arg_list, n);
+	i = 0;
 	while (i < n)
 	{
 		s = va_arg(arg_list, char *);
